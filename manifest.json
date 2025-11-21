@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Linux.do 便捷标签",
+  "version": "1.0",
+  "description": "Open linux.do post links in new background tabs",
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://linux.do/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
